@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ethann Yakabuski">
+
+    <title>Buskees</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<%= static_path + "/bootstrap/css/theme/" + theme + "/bootstrap.css" %>" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="<%= static_path + "/bootstrap/css/jumbotron-narrow.css" %>" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+        <h3 class="text-muted">Buskees Services: Ottawa</h3>
+      </div>
+	  
+	  <% if (flask_debug === 'true') { %>
+      <div class="alert alert-danger">
+      	Flask is in debug mode. This is not safe for production.
+      </div>
+      <% } %>
+	  
+      <div class="jumbotron">
+        <h1>Buskees</h1>
+        <p class="lead">Thank you for visiting, I hope we can be of service to you!</p>
+		<div id="services">
+		  <p> Lawnmowing </p>
+		  <p> Aeration </p>
+		  <p> Driveway Sealing </p>
+		  <p> General Labor </p>
+		</div>
+      </div>
+
+
+      <div class="footer">
+		<div id="Logo">
+		<a href='https://photos.google.com/share/AF1QipO5I9DF9QYZA-UZl3TtkjnFWMbbo7AkgivmW1OF6_iPHThUlzQEO8KOwrIi9zCMxQ?key=N1hSMzhUVDVVR1A0MHl6RFFMdzR0a0VjUnNmYmVR&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/JuIcGtxxTkBpXMm3D63IV9GAqZbtvkStMvK8XSyua_982puL2QK7d7g2-SWwsz9cdVOE9s86v2ShAXaxPkGze2o1dwCboUp0aqvILYLiQ-y1yJZgQktbzuN7KG7biwyhB8nSsjpI=w2400' /></a>
+		<p>&copy; Buskees</p>
+		</div>
+      </div>
+      
+      
+
+    </div> <!-- /container -->
+
+    <script src="<%= static_path + "/jquery/jquery-1.11.3.min.js" %>"></script>
+    <script src="<%= static_path + "/bootstrap/js/bootstrap.min.js" %>"></script>
+    
+  </body>
+</html>
