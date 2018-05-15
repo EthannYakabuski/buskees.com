@@ -39,6 +39,7 @@ if (cluster.isMaster) {
     app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
     app.use(bodyParser.urlencoded({extended:false}));
+	
 
     app.get('/', function(req, res) {
         res.render('index', {
@@ -47,6 +48,16 @@ if (cluster.isMaster) {
             flask_debug: process.env.FLASK_DEBUG || 'false'
         });
     });
+	
+	app.get('/about', function(req, res) {
+		res.render('about', {
+			static_path: 'static',
+			theme: process.env.THEME || 'flatly',
+			flask_debug: process.env.FLASK_DEBUG || 'false'
+		});
+	});
+	
+	
 
     app.post('/signup', function(req, res) {
         var item = {
