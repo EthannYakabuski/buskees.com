@@ -10,13 +10,13 @@
     <title>Buskees</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<%= static_path + "/bootstrap/css/theme/" + theme + "/bootstrap.css" %>" rel="stylesheet">
+    <link type="text/html" href="/static/bootstrap/css/theme/flatly/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-	<link rel="stylesheet" type= "text/html" href="/boottrap/css/jumbotron-narrow.css">
+	<link rel="stylesheet" type="text/html" href="/static/bootstrap/css/jumbotron-narrow.css">
 	
-	<script src="<%= static_path + "/jquery/jquery-1.11.3.min.js" %>"></script>
-    <script src="<%= static_path + "/bootstrap/js/bootstrap.min.js" %>"></script>
+	<script type="application/json" src="/jquery/jquery-1.11.3.min.js"</script>
+    <script type="application/json" src="/bootstrap/js/bootstrap.min.js"</script>
 	
   </head>
 
@@ -25,19 +25,14 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="/">Home</a></li>
+		  <li><a href="services">Services</a></li>
           <li><a href="about">About</a></li>
           <li><a href="blog">Blog</a></li>
           <li><a href="contact">Contact</a></li>
         </ul>
         <h3 class="text-muted">Buskees Services: Ottawa</h3>
       </div>
-	  
-	  <% if (flask_debug === 'true') { %>
-      <div class="alert alert-danger">
-      	Flask is in debug mode. This is not safe for production.
-      </div>
-      <% } %>
 	  
       <div class="jumbotron">
         <h1>Buskees</h1>
@@ -56,6 +51,9 @@
 		The goal of this business is to provide reliable and flexible service at a low price for general deeds around the yard.
 		Receipts are given on every transaction, and no funds are collected until all work has been seen through.
 		</p>
+		
+		<a href='https://photos.google.com/share/AF1QipMBN-k0ZdgS5Oqmno-yqyAbrcSZ4HWy96inWpixVrDqfFJry2pQwlHhJVlIiiWOOg?key=M1k2eThWU1UxM0kzLUllaVhFMzZvMUdiYTBUWHdn&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/_r7z7t02kt5KXiw5BHlcDEhfH17BhtZ4XRRJIF1xB7_OKMm7v2EyJp8N4ORLvNgbPg6DCCZCYCeS0f3RFTAXtdIIktpFsbHOcpG9HB2w_ERrfoiMxivocaVvxybgai1_-P-LwfK8=w2400' /></a>
+		
 		<p>We offer weekly, bi-weekly, monthly or as per needed basis yard servicing at low cost. At no point is there any
 		obligation to continue. We are able to keep our prices low by limiting overhead and providing a great customer experience. 
 		</p>

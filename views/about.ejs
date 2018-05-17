@@ -6,14 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="Ethann Yakabuski"> 
 	
-	<!-- Bootstrap core CSS -->
-    <link type="text/css" href="/static/bootstrap/css/theme/flatly/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="<%= static_path + "/bootstrap/css/theme/" + theme + "/bootstrap.css" %>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-	<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/jumbotron-narrow.css">
-	
-	<script type="application/json" src="/jquery/jquery-1.11.3.min.js"</script>
-    <script type="application/json" src="/bootstrap/js/bootstrap.min.js"</script>
+    <link href="<%= static_path + "/bootstrap/css/jumbotron-narrow.css" %>" rel="stylesheet">
+    <script src="<%= static_path + "/jquery/jquery-1.11.3.min.js" %>"></script>
+    <script src="<%= static_path + "/bootstrap/js/bootstrap.min.js" %>"></script>
 	
   </head>
   
@@ -22,8 +21,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Home</a></li>
-		  <li><a href="services">Services</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li><a href="about">About</a></li>
           <li><a href="blog">Blog</a></li>
           <li><a href="contact">Contact</a></li>

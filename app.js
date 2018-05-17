@@ -36,8 +36,15 @@ if (cluster.isMaster) {
     var snsTopic =  process.env.NEW_SIGNUP_TOPIC;
     var app = express();
 
-    app.set('view engine', 'ejs');
+	app.engine('html', require('ejs').renderFile);
+    app.set('view engine', 'html');
+
+    
+    //app.set('views', './views'); 
+	
+    //app.set('view engine', 'ejs');
     app.set('views', __dirname + '/views');
+	app.use(express.static('views'));
     app.use(bodyParser.urlencoded({extended:false}));
 	
 
@@ -51,6 +58,30 @@ if (cluster.isMaster) {
 	
 	app.get('/about', function(req, res) {
 		res.render('about', {
+			static_path: 'static',
+			theme: process.env.THEME || 'flatly',
+			flask_debug: process.env.FLASK_DEBUG || 'false'
+		});
+	});
+	
+	app.get('/services', function(req, res) {
+		res.render('services', {
+			static_path: 'static',
+			theme: process.env.THEME || 'flatly',
+			flask_debug: process.env.FLASK_DEBUG || 'false'
+		});
+	});
+	
+	app.get('/blog', function(req, res) {
+		res.render('blog', {
+			static_path: 'static',
+			theme: process.env.THEME || 'flatly',
+			flask_debug: process.env.FLASK_DEBUG || 'false'
+		});
+	});
+	
+	app.get('/contact', function(req, res) {
+		res.render('contact', {
 			static_path: 'static',
 			theme: process.env.THEME || 'flatly',
 			flask_debug: process.env.FLASK_DEBUG || 'false'
